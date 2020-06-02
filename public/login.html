@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <link rel="stylesheet" media="screen and (max-width:1034px)" href="css/responsive.css" />
+    <link rel="stylesheet" media="screen and (max-width:1034px)" href="css/responsivetour.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>DGtours | The Park Camper Tour</title>
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css" rel="stylesheet" />
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="hamberger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav nav--tours">
+            <li id="allTours"><a href="#" class="nav__el">All tours</a></li>
+
+            <!-- <form class="nav__search">
+          <button class="nav__search-btn">
+            <svg>
+              <use xlink:href="img/icons.svg#icon-search"></use>
+            </svg>
+          </button>
+          <input type="text" placeholder="Search tours" class="nav__search-input" />
+        </form> -->
+        </nav>
+        <div class="header__logo">
+            <img src="img1/onlinelogomaker-052220-1054-9522-2000-transparent.png" alt="Natours logo" />
+
+        </div>
+        <nav class="nav nav--user">
+            <ul class="navlinks">
+
+                <!-- <li id='link0'><a href="#" class="nav__el">My bookings</a></li>
+                <li id='link01'><a href="#" class="nav__el">Log Out</a></li>
+                <li id='link1'><img src="img/user.jpg" alt="User photo" class="nav__user-img" /></li>
+                <li id='link2'><span>Jonas</span></li> -->
+
+
+                <!--           
+            <li id='link3'><button class="nav__el logInBtn" >Log in</button></li>-->
+          <li id='link4'> <button class="nav__el nav__el--cta">Sign up</button></li> 
+
+
+                <li><a href="#" id="link5" class="display1">About us</a></li>
+                <li><a href="#" id="link6" class="display1">Download apps</a></li>
+                <li><a href="#" id="link7" class="display1">Become a guide</a></li>
+                <li><a href="#" id="link8" class="display1">Careers</a></li>
+                <li><a href="#" id="link9" class="display1">Contact</a></li>
+            </ul>
+
+
+        </nav>
+    </header>
+    <section id="divForm">
+<h2>LOG INTO YOUR ACCOUNT</h2>
+        <form id="loginForm">
+            
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1" class="lable">Email address</label>
+                    <input type="email" class="input" id="exampleInputEmail1" aria-describedby="emailHelp">
+                   
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1" class="lable">Password</label>
+                    <input type="password" class="input" id="exampleInputPassword1">
+                </div>
+                <div class="forgotlink">
+                    <a href="#"> Forgot your password</a>
+                </div>
+                
+                
+                <button type="submit" class="button" >LOG IN</button>
+         
+        </form>
+        
+    </section>
+
+
+    <div class="footer">
+
+        <div class="footer__logo ">
+            <img src="img1/onlinelogomaker-052220-1054-9522-2000-transparent.png" alt="Natours logo" />
+        </div>
+        <ul class="footer__nav navlinks display">
+            <li><a href="#" id="link5">About us</a></li>
+            <li><a href="#" id="link6">Download apps</a></li>
+            <li><a href="#" id="link7">Become a guide</a></li>
+            <li><a href="#" id="link8">Careers</a></li>
+            <li><a href="#" id="link9">Contact</a></li>
+        </ul>
+        <p class="footer__copyright">
+            &copy; by Dhruv Gopani. All rights reserved.
+        </p>
+    </div>
+    <script src="index.js"></script>
+</body>

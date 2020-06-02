@@ -1,0 +1,31 @@
+extends base
+
+block content 
+ section#divForm
+     h2 CREATE YOUR ACCOUNT
+     form(id="signupForm" name='signup'   enctype="multipart/form-data")
+         div.form-group
+             label(for="exampleInputEmail1" class="lable" ) Email address
+             input(type="email" class="input" id="exampleInputEmail1" aria-describedby="emailHelp" name='email' autocomplete="off")
+
+            
+         div.form-group
+             label(for="name" class="lable" ) User Name 
+             input(type="text" class="input" id="inputName" name='name')
+
+            
+         div.form-group
+             label(for="exampleInputPassword1" class="lable" ) Password
+             input(type="password" class="input" id="exampleInputPassword1" name='password' autocomplete='on' required minlength="8")
+
+         div.form-group
+             label(for="exampleInputPassword1" class="lable") Confirm Password
+             input(type="password" class="input" id="exampleInputPassword2"  name='confirm_password'  autocomplete="on" required minlength="8")
+         div.form-group.profile_photo_div
+             label(for="inputImage" class="btn-text profile-lable")  Choose Your Profile Photo
+             input(type="file" class="input form__upload" id="inputImage" name='file' accept='image/*')
+        
+
+         button(type="submit" class="button") SIGN UP
+
+    

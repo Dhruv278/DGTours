@@ -1,0 +1,32 @@
+#signupForm{
+    
+    background-color: white;
+    display: block;
+    width: 400px;
+   margin: auto;
+    display: block;
+ margin-top: 30px;
+
+}
+#inputImage{
+  height: 38px;
+}
+.button{
+  margin-top: 10px;
+}
+
+@media only screen and (max-width:450px){
+#signupForm{
+    
+  background-color: white;
+  display: block;
+  width: 97%;
+ margin: auto;
+  height: 400px;
+margin-top: 20px;
+margin-left:10px ;
+
+/* z-index: 2; */
+
+}
+}
