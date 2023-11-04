@@ -32,7 +32,6 @@ console.log(port)
 const server=app.listen(port,()=>{
     console.log(`server is listing on port ${port}`);
 })
-
 process.on('SIGTERM',()=>{
   console.log('SIGTERM is working')
   server.close(()=>{
