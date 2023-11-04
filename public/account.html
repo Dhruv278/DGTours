@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/account.css" />
+  <link rel="stylesheet" media="screen and (max-width:1034px)" href="css/accountResponsive.css" />
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+  <link rel="stylesheet" media="screen and (max-width:1034px)" href="css/responsive.css" />
+  <link rel="stylesheet" media="screen and (max-width:1034px)" href="css/responsivetour.css" />
+
+  <title>DGtours | The Park Camper Tour</title>
+
+  <script src="https://api.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v0.50.0/mapbox-gl.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="header">
+
+    <div class="hamberger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <nav class="nav nav--tours">
+      <li id="allTours"><a href="#" class="nav__el">All tours</a></li>
+
+      <!-- <form class="nav__search">
+          <button class="nav__search-btn">
+            <svg>
+              <use xlink:href="img/icons.svg#icon-search"></use>
+            </svg>
+          </button>
+          <input type="text" placeholder="Search tours" class="nav__search-input" />
+        </form> -->
+    </nav>
+    <div class="header__logo">
+      <img src="img1/onlinelogomaker-052220-1054-9522-2000-transparent.png" alt="Natours logo" />
+
+    </div>
+    <nav class="nav nav--user">
+      <ul class="navlinks">
+
+        <li id='link01'><a href="#" class="nav__el">Log Out</a></li>
+        <li id='link1'><img src="img/user.jpg" alt="User photo" class="nav__user-img" /></li>
+        <li id='link2'><a href="#">Jonas</a></li>
+
+
+        <!--           
+            <li id='link3'><button class="nav__el logInBtn" >Log in</button></li>
+          <li id='link4'> <button class="nav__el nav__el--cta">Sign up</button></li> -->
+
+
+        <li><a href="#" id="link5" class="display1">About us</a></li>
+        <li><a href="#" id="link6" class="display1">Download apps</a></li>
+        <li><a href="#" id="link7" class="display1">Become a guide</a></li>
+        <li><a href="#" id="link8" class="display1">Careers</a></li>
+        <li><a href="#" id="link9" class="display1">Contact</a></li>
+      </ul>
+
+
+    </nav>
+  </header>
+
+
+
+
+
+
+  <section class="mainaccount">
+    <div>
+
+
+      <button class="hamburgerbutton">></button>
+
+
+      <ul class="acountLinkUl nav--links2">
+        <li class="">
+          <a id="accountLink0" class="alink" href='#'>
+
+            <svg class="svg">
+              <use xlink:href='img/icons.svg#icon-settings'> </use>
+            </svg>
+            <span> Settings</span>
+          </a>
+        </li>
+        <li class="">
+          <a class="alink" id="accountLink3" href='#'>
+
+            <svg class="svg">
+              <use xlink:href='img/icons.svg#icon-briefcase'> </use>
+            </svg>
+            <span>My Bookings</span>
+          </a>
+        </li>
+        <li class="">
+          <a class="alink" id="accountLink1" href='#'>
+
+            <svg class="svg">
+              <use xlink:href='img/icons.svg#icon-star'> </use>
+            </svg>
+            <span>My reviews</span>
+          </a>
+        </li>
+        <li class="">
+          <a class="alink" id="accountLink2" href='#'>
+
+            <svg class="svg">
+              <use xlink:href='img/icons.svg#icon-credit-card'> </use>
+            </svg>
+            <span>Billing</span>
+          </a>
+        </li>
+        <h2 class="H2admin">Admin</h2>
+        <li class="">
+          <a class="alink" id="accountLink2" href='#'>
+
+            <svg class="svg">
+              <use xlink:href='img/icons.svg#icon-map'> </use>
+            </svg>
+            <span> Manage tours</span>
+          </a>
+        </li>
+        <li class="">
+          <a class="alink" id="accountLink2" href='#'>
+
+            <svg class="svg">
+              <use xlink:href='img/icons.svg#icon-users'> </use>
+            </svg>
+            <span> Manage user</span>
+          </a>
+        </li>
+        <li class="">
+          <a class="alink" id="accountLink2" href='#'>
+
+            <svg class="svg">
+              <use xlink:href='img/icons.svg#icon-star'> </use>
+            </svg>
+            <span> Manage reviews</span>
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+    <main class="accountform">
+      <div class="user-view__content">
+        <div class="user-view__form-container">
+          <h2 class="heading-secondary.ma-bt-md accountH2"> Your account settings</h2>
+          <form class="form.form-user-data">
+            <div class="form__group">
+              <label for="name" class="form__label">Name</label>
+              <input id="name" class="form__input" type='text' value='Jonas Schmedtmann' required>
+            </div>
+            <div class="form__group ma-bt-md">
+              <label for="email" class="form__label">Your Email</label>
+              <input id="email" class="form__input" type='email' value='admin@dhtours.io' required>
+            </div>
+            <div class="form__group form__photo-upload">
+              <img class="form__user-photo" src="img/user.jpg" alt="Your Photo">
+              <a href="" class="btn-text"> Choose new photo</a>
+            </div>
+            <div class="form__group right">
+              <button class="btn.btn--small btn--green">Save Settings</button>
+            </div>
+            <div class="line"> &nbsp</div>
+          </form>
+
+        </div>
+        <div class="user-view__form-container">
+          <h2 class="heading-secondary ma-bt-md"> Password change </h2>
+          <form class="form form-user-settings">
+            <div class="form__group">
+              <label for="password-current" class="form__label"> Current password</label>
+              <input type="password" id="password-current" class="form__input" placeholder='••••••••' required
+                minlength='8'>
+            </div>
+            <div class="form__group">
+              <label for="password" class="form__label"> New password</label>
+              <input type="password" id="password" class="form__input" placeholder='••••••••' required minlength='8'>
+            </div>
+            <div class="form__group ma-bt-lg">
+              <label for="password-confirm" class="form__label">Confirm password</label>
+              <input type="password" id="password-confirm" class="form__input" placeholder='••••••••' required
+                minlength='8'>
+            </div>
+            <div class="form__group right">
+              <button class="btn.btn--small btn--green">Save password</button>
+
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="footer">
+    <div class="footer__logo ">
+      <img src="img1/onlinelogomaker-052220-1054-9522-2000-transparent.png" alt="Natours logo" />
+    </div>
+    <ul class="footer__nav navlinks display">
+      <li><a href="#" id="link5">About us</a></li>
+      <li><a href="#" id="link6">Download apps</a></li>
+      <li><a href="#" id="link7">Become a guide</a></li>
+      <li><a href="#" id="link8">Careers</a></li>
+      <li><a href="#" id="link9">Contact</a></li>
+    </ul>
+    <p class="footer__copyright">
+      &copy; by Dhruv Gopani. All rights reserved.
+    </p>
+  </div>
+  <script src="js/index.js"></script>
+</body>
+<script src="js/account.js"></script>
+
+</html>

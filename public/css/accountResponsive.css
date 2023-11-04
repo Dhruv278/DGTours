@@ -1,0 +1,46 @@
+
+
+.landing{
+    height: 600px;
+    
+}
+.nav--links2{
+    position: absolute;
+    display: flex;
+    flex-direction: column; 
+    top: 180px;
+    left: 0;
+    background:rgb(212, 208, 208);;
+    height: 550px;
+    width: 250px;
+    clip-path: circle(90px at -10% -10%);
+    -webkit-clip-path: circle(90px at -26% -10%);
+    transition: all 1s ease-out;
+    /* display: none; */
+}
+.nav--links2.open{
+    clip-path: circle(1200px at 10% -10%);
+    -webkit-clip-path: circle(1200px at 10% -10%);
+  z-index: 3;
+}
+.hamburgerbutton{ 
+    margin: 10px;
+    padding: 10px;
+    font-size: 3rem;
+    background-color: violet ;
+    z-index: 2;
+}
+
+@media only screen and (max-width:500px){
+    .mainaccount{
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+    }
+    .user-view__content{
+        padding:10px
+    }
+    .user-view__form-container{
+        padding: 10px;
+    }
+}

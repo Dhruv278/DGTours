@@ -1,0 +1,48 @@
+header.header
+             div.hamberger
+                  div.line
+                  div.line
+                  div.line
+    
+             nav.nav.nav--tours
+                 li#allTours
+                     a.nav__el(href="/") All tours
+
+                 form.nav__search
+                     button.nav__search-btn
+                         svg
+                             use(xlink:href="/img/icons.svg#icon-search")
+          
+        
+                     input.nav__search-input(type="text" placeholder="Search tours")
+      
+
+             
+
+    
+             nav.nav.nav--user
+                 ul.navlinks
+                     
+                     if user
+                         li#link01
+                             a(href="#" class="nav__el" id="logoutlink") Log Out
+                         li#link1
+                             img(src=`/img/users/${user.photo}` alt="User photo" class="nav__user-img")
+                         li#link2
+                             a(href='/me')=user.name.split(' ')[0]
+                     else
+                         li#link3
+                             a.nav__el.logInBtn(href="/login") Log in
+                         li#link4 
+                             a.nav__el.nav__el--cta(href='/signup') Sign up 
+       
+                     li
+                         a.display1#link5(href="/about-us" ) About us
+                     li
+                         a.display1#link6(href="/fogotpassword" ) Forgot Password
+                     li
+                         a.display1#link7(href="/devlopment") Become a guide
+                     li
+                         a.display1#link8(href="/devlopment") Careers
+                     li
+                         a.display1#link9(href="/devlopment") Contact

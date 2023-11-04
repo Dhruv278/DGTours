@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0" )
+        link(rel="stylesheet" href="/css/style.css" )
+        link(rel="stylesheet" href="/css/login.css" )
+        link(rel="stylesheet" href="/css/signup.css" )
+        link(rel="stylesheet" href="/css/account.css" )
+        link(rel='shortcut icon' type='image/png' href='/img/favicon.png')
+        link(rel="stylesheet" media="screen and (max-width:1034px)" href="/css/responsivetour.css")
+        link(rel="stylesheet" media="screen and (max-width:1034px)" href="/css/responsive.css" )
+        link( rel="stylesheet"  media="screen and (max-width:1034px)" href="/css/accountResponsive.css" )
+        title DGtours | #{title}
+
+    body(data-alert=`${alert ? alert :''}`)
+    
+     include _header
+
+        
+     block content
+            h1 hadinng for replacement
+    
+     include _footer
+
+
+
+    
+     script(src="https://js.stripe.com/v3/")
+     script(src=`/js/bundel.js`)
+  

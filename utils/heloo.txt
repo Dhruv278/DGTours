@@ -1,0 +1,45 @@
+[12:30 AM, 5/31/2020] Bholu: const nodemailer = require("nodemailer");
+// const serviceCallEmailAddress = "orders@shippler.net";
+const serviceCallEmailAddress = "dhruvgopani8@gmail.com";
+const serviceCallEmailPassword = "pbgdfdaynsufatxx";
+
+const serviceCallEmailHOST = "smtp.gmail.com";
+const serviceCallEmailPORT = 587;
+
+function sendMail(toEmail, subject, bodyHtml, callback) {
+  const transport = nodemailer.createTransport({
+    port: serviceCallEmailPORT,
+    host: serviceCallEmailHOST,
+    auth: {
+      user: serviceCallEmailAddress,
+      pass: serviceCallEmailPassword,
+    },
+  });
+  transport.sendMail(
+    {
+      from: serviceCallEmailAddress,
+      to: toEmail,
+      subject: subject,
+      html: bodyHtml,
+      replyTo: serviceCallEmailAddress,
+    },
+    (error, info) => {
+      if (error) {
+        if (callback && typeof callback == "function") callback(error);
+      } else {
+        console.log(`Message sent: ${info.response}`);
+        if (callback && typeof callback == "function") callback(info);
+      }
+    }
+  );
+}
+function test() {
+  sendMail(
+    "dharmikjagodana007@gmail.com",
+    "this is testing mail",
+    "<h5>this is body html</h5>",
+    () => {
+      console.log("mail sent successfully");
+    }
+  );
+}

@@ -1,0 +1,51 @@
+.mainaccount{
+    display: grid;
+    grid-template-columns: 1fr 4.5fr;
+    background-color: white;
+}
+
+
+.acountLinkUl{
+height: 100%;
+width: 500px;
+background-color: rgb(254, 243, 249)
+
+}
+.svg{
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+    margin-bottom: 0px;
+  
+}
+.alink{
+    text-decoration: none;
+}
+.alink span{
+    font-size: 1.95rem;
+    text-decoration: none;
+    color: rgb(164, 26, 164);
+    
+    margin-bottom: 40px;
+    width: 30px;
+
+
+}
+
+.accountform{
+    background-color: white;
+}
+.accountH2{
+    margin: 20px;
+    font-size: 3rem;
+}
+.H2admin{
+    margin: 10px;
+    font-size: 3rem;
+    margin-top: 50px;
+}
+@media only screen and (min-width:1034px){
+.hamburgerbutton{
+    display: none;
+}
+}

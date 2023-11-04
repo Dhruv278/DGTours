@@ -1,0 +1,125 @@
+extends base
+mixin cardReview(review)
+      div.reviews__card
+          div.reviews__avatar
+             img.reviews__avatar-img(src=`/img/users/${review.user.photo}` alt=`${review.user.name}`)
+            
+            
+             h6.reviews__user=review.user.name
+          
+          p.reviews__text=review.review
+            
+          
+          div.reviews__rating
+             each star in [1,2,3,4,5]
+                svg.reviews__star(class=`reviews__star--${review.rating>=star?'active':'inactive'}`)
+                   use(xlink:href="/img/icons.svg#icon-star")
+            
+             
+mixin overViewBox(lable,text,icon)
+ div.overview-box__detail
+      svg.overview-box__icon
+         use(xlink:href=`/img/icons.svg#icon-${icon}`)
+   
+      span.overview-box__label=lable
+      span.overview-box__text=text
+
+
+ 
+
+block content 
+ section.section-header
+    
+    img.header__hero-img(src=`/img/tours/${tour.imageCover}` alt=`${tour.name}`)
+
+    .heading-box
+       h1.heading-primary
+          span= `${tour.name} Tour`
+          
+        
+       div.heading-box__group
+          div.heading-box__detail
+             svg.heading-box__icon
+                use(xlink:href="/img/icons.svg#icon-clock")
+            
+             span.heading-box__text=`${tour.duration} days`
+          
+          div.heading-box__detail
+             svg.heading-box__icon
+                use(xlink:href="/img/icons.svg#icon-map-pin")
+            
+             span.heading-box__text= tour.startLocation.description
+          
+
+
+ section.section-description
+    div.overview-box
+       div
+          div.overview-box__group
+             h2.heading-secondary.ma-bt-lg Quick facts
+             +overViewBox('Next date',tour.startDates[0].toLocaleString('en-us',{month:'long',year:'numeric'}),'calendar')
+             +overViewBox('Difficulty',tour.difficulty,'trending-up')
+             +overViewBox(`Participants`,`${tour.maxGroupSize} Peoples`,'user')
+             +overViewBox('Rating',tour.ratingsAverage,'star')
+
+
+         
+         
+
+          div.overview-box__group
+             h2.heading-secondary.ma-bt-lg Your tour guides
+             each guide in tour.guides
+                  div.overview-box__detail
+                   img.overview-box__img(src=`/img/users/${guide.photo}` alt=`${guide.name}`)
+                   - if (guide.role==='lead-guide')
+                      span.overview-box__label Lead guide
+                   - if (guide.role==='guide')
+                      span.overview-box__label Tour guide
+                   span.overview-box__text=guide.name
+            
+             
+            
+          
+        
+   
+
+    div.description-box
+       h2.heading-secondary.ma-bt-lg=`About ${tour.name} tour`
+       -const p=tour.description.split('\n')
+       each para in p 
+          p.description__text=para
+        
+       
+        
+      
+ section.section-pictures
+    each img,index in tour.images
+       div.picture-box
+          img.picture-box__img(src=`/img/tours/${img}` alt=`The ${tour.name} 1` class=`picture-box__img--${index+1}`)
+      
+      
+   
+        
+   
+ section.section-reviews
+    div.reviews
+       each review in tour.review
+          +cardReview(review)  
+            
+          
+        
+ section.section-cta
+    div.cta
+       img.favicon(src="/img/favicon.png" alt="DGtours logo")
+       div.cta__content
+          h2.heading-secondary What are you waiting for?
+          p.cta__text=`${tour.duration} days. 1 adventure. Infinite memories. Make it yours today!`
+          
+          if user
+             button.btn.btn--green.span-all-rows#bookTour(data-tour-Id=`${tour.id}`) Book tour now!
+          else
+             a.btn.btn--green.span-all-rows(href="/login") Log in First
+
+    
+
+ 

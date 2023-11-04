@@ -1,0 +1,158 @@
+
+
+
+
+.header__logo img{
+    position: absolute;
+    top:10px;
+    right: 20px;
+    height: 6rem;
+}
+@media only screen and (max-width:1034px){
+.section-header{
+    height: 400px;
+}
+}
+@media only screen and (max-width:640px){
+.section-header{
+    height: 300px;
+}
+}
+.heading-primary{
+    font-size: 2rem;
+    
+}
+@media only screen and (max-width:1034px){
+    
+    .heading-primary span{
+        font-size: 4rem;
+        padding: .5rem;
+    }
+}
+@media only screen and (max-width:550px){
+.heading-primary{
+        margin: 0px;
+        
+        width: 300px;
+ }
+}
+    
+ .heading-box{
+     margin-top: 21px;
+ }
+    
+    .heading-primary span{
+        font-size: 3rem;
+        padding: .5rem;
+        
+    }
+
+.heading-box__group {
+    color: black;
+}
+
+.section-description{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    grid-template-rows: 1fr;
+   
+}
+@media only screen and (max-width:600px){
+    .description-box{
+        padding: 0px;
+        padding-bottom: 30px;
+    }
+    .overview-box{
+        padding: 30px;
+    }
+}
+.description-box{
+  display:block;
+  width: 100%;
+  
+}
+.overview-box{
+    display:inline-block;
+    
+  }
+.reviews{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.reviews__card{
+    margin: 10px;
+}
+.cta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+.cta__content{
+    display: flex;
+    flex-direction: column;
+}
+.favicon{
+    margin: 30px;
+    height: 100px;
+    width: 129px;
+}
+.heading-secondary{
+    margin: 5px;
+}
+.cta__text{
+    margin: 6px;
+}
+/* #map{
+
+    position: absolute;
+    top:156em;
+    z-index: 100000;
+    
+} */
+
+@media only screen and (max-width:650){
+    .picture-box img{
+        width: 10px;
+    }
+}
+
+#bookTours{
+    /* display: block; */
+    width: 70px;
+    position: absolute;
+    right: 500px;
+    top:20px;
+}
+@media only screen and (max-width:600px){
+    .section-cta{
+        padding: 2rem;
+        padding-bottom: 6rem;
+        padding-top: calc(7rem + var(--section-rotate));
+        
+    }
+};
+ @media only screen and (max-width:600px){
+    .description-box {
+      
+        padding: 20px;
+    }
+ }
+@media only screen and (max-width:600px){
+    .description-box{
+        height: 500px;
+        overflow: scroll;
+    }
+}
+
+.reviews{
+    height: 500px;
+    overflow: scroll;
+}
